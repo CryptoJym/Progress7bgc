@@ -73,10 +73,14 @@ h1{font-size:1.9rem;font-weight:600;text-align:center;margin-bottom:6px;}
 .focus h2{font-size:1.15rem;text-align:left;margin-bottom:10px;}
 
 /* top nav */
-.top-nav{max-width:1100px;margin:0 auto 24px;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;}
+.top-nav{max-width:1100px;margin:0 auto 24px;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;padding:0 20px;}
 .top-nav a{color:var(--ink);text-decoration:none;padding:6px 10px;border-radius:6px;}
 .top-nav .logo{font-weight:600;}
 .top-nav a:hover{background:var(--line);}  
+
+/* timeline section card wrapper */
+.timeline-card.card h2{margin-bottom:12px;text-align:center;}
+.timeline-card .timeline-wrapper{margin-top:6px;}
 
 /* archive details */
 .archive{max-width:1100px;margin:36px auto 0;border:1px solid var(--line);border-radius:12px;padding:18px;}
