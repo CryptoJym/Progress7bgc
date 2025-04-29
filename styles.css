@@ -37,8 +37,8 @@ h1{font-size:1.9rem;font-weight:600;text-align:center;margin-bottom:6px;}
 
 /* legend */
 .legend{display:flex;justify-content:center;gap:28px;margin-bottom:24px;font-size:0.9rem;flex-wrap:wrap;color:var(--muted);}
-.legend span{display:inline-flex;align-items:center;gap:6px;margin-top:6px;}
-.dot{width:16px;height:16px;border-radius:50%;display:inline-block;}
+.legend span{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-weight:500;}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block;}
 .plan-dot{background:var(--planned);}
 .proj-dot{background:var(--projected);}
 .actual-dot{background:var(--actual);}
@@ -71,12 +71,16 @@ h1{font-size:1.9rem;font-weight:600;text-align:center;margin-bottom:6px;}
 /* focus list */
 .focus{max-width:880px;margin:44px auto 0;font-size:0.94rem;}
 .focus h2{font-size:1.15rem;text-align:left;margin-bottom:10px;}
+.focus.card ul{padding-left:20px;}
 
 /* top nav */
-.top-nav{max-width:1100px;margin:0 auto 24px;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;padding:0 20px;}
+.top-nav{position:sticky;top:0;background:var(--card-bg);box-shadow:0 1px 2px rgba(0,0,0,.05);z-index:10;max-width:none;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;font-size:0.95rem;}
 .top-nav a{color:var(--ink);text-decoration:none;padding:6px 10px;border-radius:6px;}
 .top-nav .logo{font-weight:600;}
 .top-nav a:hover{background:var(--line);}  
+
+/* tag badge */
+.tag{display:inline-block;background:#e0e7ff;color:#3730a3;font-size:0.85rem;font-weight:500;padding:2px 8px;border-radius:6px;}
 
 /* timeline section card wrapper */
 .timeline-card.card h2{margin-bottom:12px;text-align:center;}
@@ -88,8 +92,17 @@ h1{font-size:1.9rem;font-weight:600;text-align:center;margin-bottom:6px;}
 .archive summary{cursor:pointer;font-size:1rem;font-weight:500;}
 .archive summary::-webkit-details-marker{display:none;}
 
+/* milestone border styles by status */
+.milestone .dot.plan-dot{border:3px dashed var(--planned);background:transparent;}
+.milestone .dot.proj-dot{border:3px dotted var(--projected);background:transparent;}
+.milestone .dot.actual-dot{border:3px solid var(--actual);background:var(--actual);}
+.milestone .dot.prog-dot{border:3px solid var(--progress);background:var(--progress);}
+
 /* keyboard focus ring restore */
 :focus-visible{outline:2px solid var(--projected);outline-offset:2px;}
+
+/* prefers reduced motion */
+@media (prefers-reduced-motion: reduce){.milestone{transition:none;}}
 
 /* mobile */
 @media(max-width:600px){body{padding:32px 14px;}h1{font-size:1.55rem;}.milestone{flex:0 0 240px;}.hero h1{font-size:1.65rem;}}
