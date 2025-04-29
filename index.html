@@ -28,11 +28,11 @@
 
       <section class="summary updates card" aria-labelledby="changes-heading">
         <h2 id="changes-heading">What’s new in v1.5</h2>
-        <ul>
-          <li>Vendor pivot: <strong>InformData Criminal API</strong> replaces Appriss.</li>
-          <li>CJIS enclave removed; infra simplified.</li>
-          <li>Cost per report target lowered to <strong>$1.00</strong>.</li>
-          <li>New milestone schedule mapped (M1–M4).</li>
+        <ul class="clean-list">
+          <li><strong>Single-vendor pivot:</strong> InformData Criminal API replaces Appriss.</li>
+          <li><strong>Simpler infra:</strong> CJIS enclave removed.</li>
+          <li><strong>Cost target:</strong> Now ≤ <strong>$1.00</strong> per report.</li>
+          <li><strong>Schedule reset:</strong> milestones realigned (M1-M4).</li>
         </ul>
       </section>
 
@@ -48,189 +48,65 @@
 
       <!-- Milestone timeline — PRD v1.5 -->
       <section aria-labelledby="timeline-heading-new" class="timeline-card card">
-        <h2 id="timeline-heading-new">Milestone timeline — PRD v1.5</h2>
-        <div class="timeline-wrapper" style="padding: 0 1rem;">
-          <button class="scroll-btn left" aria-label="Scroll left" data-dir="-1">‹</button>
-          <div class="timeline" tabindex="0">
-            <!-- Sign-off -->
-            <article class="milestone">
-              <h3>v1.5 Sign-off</h3>
-              <small>M0</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 22 May</span></div>
-              <p class="desc">PRD approved &amp; funding.</p>
-            </article>
-            <!-- M1 -->
-            <article class="milestone">
-              <h3>InformData Leaf + OAuth</h3>
-              <small>M1</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 06 Jun</span></div>
-              <p class="desc">Batch submit &amp; token cache.</p>
-            </article>
-            <!-- M2 -->
-            <article class="milestone">
-              <h3>RecordSynth v2 + state policy</h3>
-              <small>M2</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 09 Jun</span></div>
-              <p class="desc">7-yr filter with CA/NY rules.</p>
-            </article>
-            <!-- M3 -->
-            <article class="milestone">
-              <h3>§ 613 Notice Service</h3>
-              <small>M3</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 13 Jun</span></div>
-              <p class="desc">Consumer e-mail within 60 s.</p>
-            </article>
-            <!-- Sandbox Perf -->
-            <article class="milestone">
-              <h3>Sandbox Perf Test</h3>
-              <small>Perf</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 14 Jun</span></div>
-              <p class="desc">Throughput ≥100 RPS.</p>
-            </article>
-            <!-- M4 -->
-            <article class="milestone">
-              <h3>Review UI Alpha</h3>
-              <small>M4</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 20 Jun</span></div>
-              <p class="desc">Zero-hit auto-clear workflow.</p>
-            </article>
-            <!-- SOC2 Evidence -->
-            <article class="milestone">
-              <h3>SOC 2 Evidence 30-day</h3>
-              <small>S2</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 20 Jun</span></div>
-              <p class="desc">Artifacts collected.</p>
-            </article>
-            <!-- Beta -->
-            <article class="milestone">
-              <h3>Beta (10 UT clients)</h3>
-              <small>Beta</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 15 Jul</span></div>
-              <p class="desc">Pilot with first customers.</p>
-            </article>
-            <!-- GA -->
-            <article class="milestone">
-              <h3>GA Utah</h3>
-              <small>GA</small>
-              <div class="status-row"><span class="dot plan-dot"></span><span>Pl 31 Jul</span></div>
-              <p class="desc">Fully automated Utah package.</p>
-            </article>
+        <h2 id="timeline-heading-new">Milestone roadmap — PRD v1.5</h2>
+
+        <!-- Lane 1: Integration & Infra -->
+        <div class="lane">
+          <h3 class="lane-label">Integration &amp; Infra</h3>
+          <div class="timeline-wrapper" style="padding:0 1rem;">
+            <button class="scroll-btn left" aria-label="Scroll lane left" data-dir="-1">‹</button>
+            <div class="timeline" tabindex="0">
+              <!-- Sign-off -->
+              <article class="milestone"><h3>v1.5 Sign-off</h3><small>M0</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 22 May</span></div><p class="desc">PRD approved &amp; funding.</p></article>
+              <!-- M1 -->
+              <article class="milestone"><h3>InformData Leaf + OAuth</h3><small>M1</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 06 Jun</span></div><p class="desc">Batch submit &amp; token cache.</p></article>
+              <!-- Perf -->
+              <article class="milestone"><h3>Sandbox Perf Test</h3><small>Perf</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 14 Jun</span></div><p class="desc">Throughput ≥100 RPS.</p></article>
+              <!-- Beta -->
+              <article class="milestone"><h3>Beta (10 UT clients)</h3><small>Beta</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 15 Jul</span></div><p class="desc">Pilot with first customers.</p></article>
+              <!-- GA -->
+              <article class="milestone"><h3>GA Utah</h3><small>GA</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 31 Jul</span></div><p class="desc">Fully automated Utah package.</p></article>
+            </div>
+            <button class="scroll-btn right" aria-label="Scroll lane right" data-dir="1">›</button>
           </div>
-          <button class="scroll-btn right" aria-label="Scroll right" data-dir="1">›</button>
+        </div>
+
+        <!-- Lane 2: Data & UI -->
+        <div class="lane">
+          <h3 class="lane-label">Data &amp; UI</h3>
+          <div class="timeline-wrapper" style="padding:0 1rem;">
+            <button class="scroll-btn left" aria-label="Scroll lane left" data-dir="-1">‹</button>
+            <div class="timeline" tabindex="0">
+              <!-- M2 -->
+              <article class="milestone"><h3>RecordSynth v2 + state policy</h3><small>M2</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 09 Jun</span></div><p class="desc">7-yr filter with CA/NY rules.</p></article>
+              <!-- M4 -->
+              <article class="milestone"><h3>Review UI Alpha</h3><small>M4</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 20 Jun</span></div><p class="desc">Zero-hit auto-clear workflow.</p></article>
+            </div>
+            <button class="scroll-btn right" aria-label="Scroll lane right" data-dir="1">›</button>
+          </div>
+        </div>
+
+        <!-- Lane 3: Compliance -->
+        <div class="lane">
+          <h3 class="lane-label">Compliance</h3>
+          <div class="timeline-wrapper" style="padding:0 1rem;">
+            <button class="scroll-btn left" aria-label="Scroll lane left" data-dir="-1">‹</button>
+            <div class="timeline" tabindex="0">
+              <!-- M3 -->
+              <article class="milestone"><h3>§ 613 Notice Service</h3><small>M3</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 13 Jun</span></div><p class="desc">Consumer e-mail within 60 s.</p></article>
+              <!-- SOC2 Evidence -->
+              <article class="milestone"><h3>SOC 2 Evidence 30-day</h3><small>S2</small><div class="status-row"><span class="dot plan-dot"></span><span>Pl 20 Jun</span></div><p class="desc">Artifacts collected.</p></article>
+            </div>
+            <button class="scroll-btn right" aria-label="Scroll lane right" data-dir="1">›</button>
+          </div>
         </div>
       </section>
 
-      <!-- Legacy timelines collapsed for archive -->
-      <details id="archive" class="archive">
-        <summary>Archived timelines (v1.4 &amp; v1.3)</summary>
-        <!-- Legacy timeline -->
-        <section aria-labelledby="timeline-heading-legacy">
-          <h2 id="timeline-heading-legacy">Legacy timeline (v1.3)</h2>
-          <div class="timeline-wrapper" style="padding: 0 1rem;">
-            <button class="scroll-btn left" aria-label="Scroll left" data-dir="-1">‹</button>
-            <div class="timeline" tabindex="0">
-              <!-- M0 -->
-              <article class="milestone">
-                <h3>Project Definition</h3>
-                <small>M0</small>
-                <div class="status-row"><span class="dot actual-dot"></span><span>Done 19 Apr</span></div>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 25 Apr</span></div>
-                <div class="delta">6 days ahead</div>
-                <p class="desc">Scope &amp; budget approved.</p>
-              </article>
-
-              <!-- M1 -->
-              <article class="milestone">
-                <h3>Core Tools</h3>
-                <small>M1</small>
-                <div class="status-row"><span class="dot actual-dot"></span><span>Done 21 Apr</span></div>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 10 May</span></div>
-                <div class="delta">19 days ahead</div>
-                <p class="desc">browser‑run, captcha‑solve &amp; pay‑exec live.</p>
-              </article>
-
-              <!-- M2 -->
-              <article class="milestone">
-                <h3>SSNTrace + Geo</h3>
-                <small>M2</small>
-                <div class="status-row"><span class="dot actual-dot"></span><span>Done 21 Apr</span></div>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 20 May</span></div>
-                <div class="delta">29 days ahead</div>
-                <p class="desc">Identity &amp; county mapping online.</p>
-              </article>
-
-              <!-- M2a -->
-              <article class="milestone">
-                <h3>Loader OCR</h3>
-                <small>M2a</small>
-                <div class="status-row"><span class="dot actual-dot"></span><span>Done 22 Apr</span></div>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 28 May</span></div>
-                <div class="delta">36 days ahead</div>
-                <p class="desc">OCR stub integrated into crawler loader.</p>
-              </article>
-
-              <!-- M3 in progress -->
-              <article class="milestone">
-                <h3>Utah Manifests</h3>
-                <small>M3</small>
-                <div class="status-row"><span class="dot prog-dot"></span><span>50 % complete</span></div>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 05 Jun</span></div>
-                <div class="status-row"><span class="dot proj-dot"></span><span>AI 05 May</span></div>
-                <div class="bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                  <div class="bar-inner" style="width:50%"></div>
-                </div>
-                <p class="desc">Auto‑generated manifests ready; portal URLs + smoke CI next.</p>
-              </article>
-
-              <!-- M4 -->
-              <article class="milestone">
-                <h3>Record Synth</h3>
-                <small>M4</small>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 20 Jun</span></div>
-                <div class="status-row"><span class="dot proj-dot"></span><span>AI 15 May</span></div>
-                <p class="desc">ML dedupe &amp; policy (coding not started).</p>
-              </article>
-
-              <!-- M5 -->
-              <article class="milestone">
-                <h3>Review UI Alpha</h3>
-                <small>M5</small>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 10 Jul</span></div>
-                <div class="status-row"><span class="dot proj-dot"></span><span>AI 25 May</span></div>
-                <p class="desc">Wireframes ready; dev not started.</p>
-              </article>
-
-              <!-- M6 -->
-              <article class="milestone">
-                <h3>CJIS Dry‑Run</h3>
-                <small>M6</small>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 10 Jul</span></div>
-                <div class="status-row"><span class="dot proj-dot"></span><span>AI 05 Jun</span></div>
-                <p class="desc">Audit prep backlog tasks.</p>
-              </article>
-
-              <!-- Beta -->
-              <article class="milestone">
-                <h3>Beta Clients</h3>
-                <small>Beta</small>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 15 Jul</span></div>
-                <div class="status-row"><span class="dot proj-dot"></span><span>AI 25 Jun</span></div>
-                <p class="desc">Onboarding &amp; SLA dashboards.</p>
-              </article>
-
-              <!-- GA -->
-              <article class="milestone">
-                <h3>Utah Launch</h3>
-                <small>GA</small>
-                <div class="status-row"><span class="dot plan-dot"></span><span>Pl 31 Jul</span></div>
-                <div class="status-row"><span class="dot proj-dot"></span><span>AI 15 Jul</span></div>
-                <p class="desc">First fully automated state live.</p>
-              </article>
-            </div> <!-- end timeline -->
-            <button class="scroll-btn right" aria-label="Scroll right" data-dir="1">›</button>
-          </div> <!-- end timeline-wrapper -->
-        </section>
-      </details>
+      <!-- Diagrams -->
+      <section class="diagram card" aria-labelledby="diagram-heading">
+        <h2 id="diagram-heading">System overview</h2>
+        <img src="https://dummyimage.com/1100x400/edf2f7/6b7280&text=System+Diagram+Placeholder" alt="Diagram: end-to-end system overview">
+      </section>
 
       <section aria-labelledby="focus-heading" class="focus card">
         <h2 id="focus-heading">Critical focus (next 2 weeks)</h2>
