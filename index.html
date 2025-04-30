@@ -31,7 +31,7 @@
         <ul class="clean-list">
           <li><strong>Dual-vendor model:</strong> InformData Criminal API + Experian F1RS for SSN trace</li>
           <li><strong>Simpler infra:</strong> CJIS enclave removed, SOC 2 compliance instead</li>
-          <li><strong>Cost target:</strong> Now <strong>$0.83-$0.95</strong> per report (setup fee waived)</li>
+          <li><strong>Cost model:</strong> Variable COGS <strong>$0.97-$1.05</strong> per report<br>(drops to <strong>$0.97-$1.01</strong> with 50 % prompt caching; $1.00 target maintained)</li>
           <li><strong>OCR stub complete:</strong> New integration with pdftotext via MCP</li>
           <li><strong>Schedule reset:</strong> milestones realigned (M1-M4, GA target still 31 Jul)</li>
         </ul>
@@ -131,7 +131,7 @@
         <ul class="clean-list">
           <li><strong>Avg TAT (no-hit):</strong> ≤90s p95</li>
           <li><strong>Avg TAT (hit):</strong> ≤10 min p95</li>
-          <li><strong>Unit COGS:</strong> $0.83-$0.95 per report</li>
+          <li><strong>Unit COGS:</strong> $0.97-$1.05 per report (≤$1.00 with 50 % cache)</li>
           <li><strong>Consumer-notice latency:</strong> ≤60s p95</li>
           <li><strong>Automated packets:</strong> ≥95%</li>
           <li><strong>SLA:</strong> 99.5% uptime</li>
@@ -183,12 +183,13 @@
 
       <!-- Cost Summary -->
       <section class="cost card" aria-labelledby="cost-heading">
-        <h2 id="cost-heading">Cost Summary (Utah COGS)</h2>
+        <h2 id="cost-heading">Cost Model v1.5 (InformData Pivot)</h2>
         <ul class="clean-list">
-          <li><strong>InformData search + CAM:</strong> $0.60</li>
-          <li><strong>SSN trace:</strong> $0.20</li>
+          <li><strong>InformData Criminal search (flat):</strong> $0.60</li>
+          <li><strong>Experian File-One SSN trace:</strong> $0.20</li>
+          <li><strong>OpenAI o3 tokens:</strong> $0.18-$0.22 (10 k in / 3 k out)</li>
           <li><strong>Compute + email:</strong> $0.03</li>
-          <li><strong>Total:</strong> $0.83-$0.95</li>
+          <li><strong>Total:</strong> $0.97-$1.05 (≤$1.01 w/ 50 % cache)</li>
           <li><strong>Setup fee:</strong> Waived on 12-month contract</li>
           <li><strong>SLA:</strong> 99.5% uptime</li>
         </ul>
