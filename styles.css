@@ -117,3 +117,8 @@ h1{font-size:1.9rem;font-weight:600;text-align:center;margin-bottom:6px;}
 
 /* diagram */
 .diagram img{width:100%;border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+
+/* basic table styling */
+.status-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:0.9rem;}
+.status-table th,.status-table td{border:1px solid var(--line);padding:6px 8px;text-align:left;}
+.status-table th{background:#f3f4f6;font-weight:500;}

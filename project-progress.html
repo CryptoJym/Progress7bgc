@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Progress — Gantt & Daily Plan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="index.html" class="logo">UT 7-yr BGC</a>
+    <a href="project-progress.html">Project Progress</a>
+  </nav>
+  <header class="hero">
+    <h1>Project Progress — Gantt & Daily Sprints</h1>
+    <p class="snapshot"><span class="tag">Updated: 29 Apr 2025</span></p>
+  </header>
+  <div class="container">
+    <section class="card">
+      <h2>Timeline overview (Gantt)</h2>
+      <div class="mermaid">
+      gantt
+        dateFormat  YYYY-MM-DD
+        title Utah 7-yr Background-Check Mesh — Sprint Roadmap
+        section Integration & Infra
+        InformData leaf scaffold          :int1, 2025-04-30, 2d
+        Sandbox Perf Test                 :int2, after int1, 2025-05-02, 3d
+        Beta (10 UT clients)              :int3, after int2, 2025-05-06, 5d
+        section Data & UI
+        RecordSynth v2 core               :data1, 2025-04-30, 4d
+        Review UI Alpha                   :data2, after data1, 4d
+        section Compliance
+        §613 Notice Service backend       :comp1, 2025-04-30, 3d
+        SOC2 Evidence 30-day docs         :comp2, after comp1, 3d
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Daily Sprint Plan</h2>
+      <details open>
+        <summary><strong>30 Apr 2025</strong> — Tasks due</summary>
+        <div class="lane">
+          <h3 class="lane-label">Integration &amp; Infra</h3>
+          <ul class="clean-list">
+            <li>🍂 Set up InformData leaf scaffolding (Go service, initial endpoints)</li>
+            <li>🍂 Implement token cache layer &amp; config</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3 class="lane-label">Data &amp; UI</h3>
+          <ul class="clean-list">
+            <li>🍂 Generate sample criminal records for RecordSynth v2</li>
+            <li>🍂 Define state-policy YAML (7-yr filter, CA/NY special rules)</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3 class="lane-label">Compliance</h3>
+          <ul class="clean-list">
+            <li>🍂 Draft §613 notice service contract (OpenAPI)</li>
+            <li>🍂 Outline e-mail template &amp; branding</li>
+          </ul>
+        </div>
+        <p class="snapshot">External blockers: awaiting InformData API credentials.</p>
+        <p class="snapshot">Research needed: Identify approved e-mail copy guidelines.</p>
+      </details>
+
+      <details>
+        <summary><strong>01 May 2025</strong> — Next day</summary>
+        <p class="snapshot">Prerequisite: InformData leaf scaffold merged to <code>main</code>.</p>
+        <div class="lane">
+          <h3 class="lane-label">Integration &amp; Infra</h3>
+          <ul class="clean-list">
+            <li>🍂 Wire InformData webhook mapping</li>
+            <li>🍂 Prepare load-test harness for Perf test</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3 class="lane-label">Data &amp; UI</h3>
+          <ul class="clean-list">
+            <li>🍂 Implement RecordSynth v2 transformation logic (7-yr rules)</li>
+            <li>🍂 Set up Review UI skeleton in React</li>
+          </ul>
+        </div>
+        <div class="lane">
+          <h3 class="lane-label">Compliance</h3>
+          <ul class="clean-list">
+            <li>🍂 Build SES integration for §613 e-mails</li>
+            <li>🍂 Draft SOC2 evidence collection checklist</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Live Component Status (from repo)</h2>
+      <div id="leaf-table">Loading…</div>
+    </section>
+
+    <section class="card">
+      <h2>Dependency Map — Why progress may stop</h2>
+      <ul class="clean-list">
+        <li><strong>InformData credentials</strong> → Blocks token cache test, Perf test.</li>
+        <li><strong>RecordSynth policy approval</strong> → Needed before UI Alpha.</li>
+        <li><strong>Legal review of §613 notice copy</strong> → Required before sending e-mails.</li>
+      </ul>
+    </section>
+  </div>
+  <script src="progress-status.js"></script>
+</body>
+</html>
