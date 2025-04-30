@@ -20,21 +20,21 @@
   <div class="container">
     <section class="card">
       <h2>Timeline overview (Gantt)</h2>
-      <div class="mermaid">
-      gantt
-        dateFormat  YYYY-MM-DD
-        title Utah 7-yr Background-Check Mesh — Sprint Roadmap
-        section Integration & Infra
-        InformData leaf scaffold          :int1, 2025-04-30, 2d
-        Sandbox Perf Test                 :int2, after int1, 2025-05-02, 3d
-        Beta (10 UT clients)              :int3, after int2, 2025-05-06, 5d
-        section Data & UI
-        RecordSynth v2 core               :data1, 2025-04-30, 4d
-        Review UI Alpha                   :data2, after data1, 4d
-        section Compliance
-        §613 Notice Service backend       :comp1, 2025-04-30, 3d
-        SOC2 Evidence 30-day docs         :comp2, after comp1, 3d
-      </div>
+      <div class="mermaid" id="gantt-chart">
+gantt
+  dateFormat  YYYY-MM-DD
+  title Utah 7-yr Background-Check Mesh — Sprint Roadmap
+  section Integration & Infra
+  InformData Leaf Scaffold  :int1, 2025-04-30, 2d
+  Sandbox Perf Test         :int2, after int1, 3d
+  Beta (10 UT clients)      :int3, after int2, 5d
+  section Data & UI
+  RecordSynth v2 Core       :data1, 2025-04-30, 4d
+  Review UI Alpha           :data2, after data1, 4d
+  section Compliance
+  §613 Notice Service       :comp1, 2025-04-30, 3d
+  SOC2 Evidence 30-day Docs :comp2, after comp1, 3d
+</div>
     </section>
 
     <section class="card">
