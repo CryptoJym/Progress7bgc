@@ -1,5 +1,5 @@
 (async function(){
-  const url = 'https://raw.githubusercontent.com/CryptoJym/utah-bgc-mesh/main/README.md';
+  const url = 'components.md'; // local copy to avoid private-repo fetch issues
   try {
     const md = await fetch(url).then(r=>r.text());
     const lines = md.split(/\r?\n/);
@@ -17,5 +17,6 @@
     document.getElementById('leaf-table').innerHTML = tableHTML;
   } catch(e){
     console.error('Failed to load component status',e);
+    document.getElementById('leaf-table').innerHTML = '<p>Error loading component status.</p>';
   }
 })();
