@@ -18,6 +18,14 @@
   </header>
 
   <div class="container">
+    <section class="overall card" aria-labelledby="overall-heading">
+      <h2 id="overall-heading">Overall Project Progress</h2>
+      <div class="progress-track"><div class="progress-fill" style="width:41%"></div></div>
+      <p class="snapshot" style="text-align:left;margin-top:6px;">41% complete based on milestone completion.</p>
+    </section>
+  </div>
+
+  <div class="container">
     <main>
       <section class="summary card" aria-label="Project summary">
         🔄 <strong>PRD v1.5 pivot</strong>: Shifted to dual-vendor model with <strong>InformData (court data)</strong> + <strong>Experian (SSN trace)</strong>; CJIS enclave removed; OCR stub complete; <strong>4 milestones</strong> remain before GA.
@@ -233,8 +241,7 @@
 
       <!-- Daily Target Experiment -->
       <section class="card" id="daily-experiment" aria-labelledby="experiment-heading">
-        <h2 id="experiment-heading">Target Experiment for Today</h2>
-        <p class="snapshot">Copy a block and run it from your <code>$REPOS_PARENT</code> directory. <em>Percentages indicate estimated share toward MVP completion.</em></p>
+        <h2 id="experiment-heading">Target Experiment</h2>
         <ul class="clean-list">
           <li>
             <details>
