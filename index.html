@@ -14,14 +14,14 @@
   <nav class="top-nav"><a href="index.html" class="logo">UT 7-yr BGC</a><a href="#archive">Archive ↘</a><a href="project-progress.html">Project Progress</a><a href="https://vuplicity.com" target="_blank" rel="noopener">vuplicity.com ↗</a><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></nav>
   <header class="hero">
     <h1>Project Progress — Utah 7-Year Background-Check Mesh</h1>
-    <p class="snapshot"><span class="tag"><time datetime="2025-04-30">Snapshot: 30 Apr 2025</time></span></p>
+    <p class="snapshot"><span class="tag"><time datetime="2025-05-01">Snapshot: 01 May 2025</time></span></p>
   </header>
 
   <div class="container">
     <section class="overall card" aria-labelledby="overall-heading">
       <h2 id="overall-heading">Overall Project Progress</h2>
-      <div class="progress-track"><div class="progress-fill" style="width:41%"></div></div>
-      <p class="snapshot" style="text-align:left;margin-top:6px;">41% complete based on milestone completion.</p>
+      <div class="progress-track"><div class="progress-fill" style="width:45%"></div></div>
+      <p class="snapshot" style="text-align:left;margin-top:6px;">45% complete based on milestone completion.</p>
     </section>
   </div>
 
@@ -56,12 +56,12 @@
           <li>✅ QA – Newman regression suite (<code>QA-1</code>)</li>
           <li>✅ QA – Fake SFTP container (<code>QA-2</code>)</li>
           <li>✅ QA – k6 performance harness (<code>PERF-1</code>)</li>
+          <li>✅ Backend – SSN-Trace poller (<code>EXP-1</code>)</li>
         </ul>
 
         <h3>In Progress</h3>
         <ul class="clean-list">
           <li>🟡 Backend – InformData Zod schema (<code>INF-1</code>) — blocked: waiting on sample payloads</li>
-          <li>🟡 Backend – SSN-Trace poller (<code>EXP-1</code>)</li>
           <li>🟡 Backend – F1RS parser (<code>EXP-2</code>)</li>
           <li>🟡 DevOps – Helm secret templates (<code>DEV-1</code>)</li>
           <li>🟡 ML Eng – RecordSynth v2 (<code>SYN-1</code>)</li>
@@ -70,7 +70,7 @@
           <li>🟡 SecOps – Hash-evidence scripts (<code>SEC-1</code>)</li>
         </ul>
 
-        <h3>Next Steps — 01 May 2025</h3>
+        <h3>Next Steps — 02 May 2025</h3>
         <ul class="clean-list">
           <li>Secure InformData sample payloads to unblock <code>INF-1</code>.</li>
           <li>Deploy Prom metrics (<code>INF-2</code>) to staging and validate scrape targets.</li>
@@ -184,14 +184,14 @@
 
       <!-- Component Status -->
       <section class="components card" aria-labelledby="comp-heading">
-        <h2 id="comp-heading">Component Status (30 Apr 2025)</h2>
+        <h2 id="comp-heading">Component Status (01 May 2025)</h2>
         <ul class="clean-list">
           <li>✅ SSN-Trace - Complete</li>
           <li>✅ GeoCoder - Complete</li>
           <li>✅ WatchList - Complete</li>
           <li>✅ OCR Stub - Complete</li>
+          <li>✅ Experian Leaf - Complete</li>
           <li>🟡 InformData Leaf - In Development (0%)</li>
-          <li>⚪ Experian Leaf - Planned (0%)</li>
           <li>⚪ RecordSynth v2 - Planned (0%)</li>
           <li>⚪ Review UI - Planned (0%)</li>
           <li>⚪ §613 Notice Service - Planned (50%)</li>
@@ -255,13 +255,6 @@ git worktree add ../utah-INF-1 origin/feature/backend/INF-1</code></pre>
               <summary><strong>Backend – Add Prom metrics (INF-2)</strong> — <strong>5 %</strong></summary>
               <pre><code>git fetch --prune origin
 git worktree add ../utah-INF-2 origin/feature/backend/INF-2</code></pre>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary><strong>Backend – SSN-Trace poller (EXP-1)</strong> — <strong>8 %</strong></summary>
-              <pre><code>git fetch --prune origin
-git worktree add ../utah-EXP-1 origin/feature/backend/EXP-1</code></pre>
             </details>
           </li>
           <li>

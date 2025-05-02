@@ -16,13 +16,13 @@
   </nav>
   <header class="hero">
     <h1>Project Progress — Gantt & Daily Sprints</h1>
-    <p class="snapshot"><span class="tag">Updated: 30 Apr 2025</span></p>
+    <p class="snapshot"><span class="tag">Updated: 01 May 2025</span></p>
   </header>
   <div class="container">
     <section class="overall card" aria-labelledby="overall2-heading">
       <h2 id="overall2-heading">Overall Project Progress</h2>
-      <div class="progress-track"><div class="progress-fill" style="width:41%"></div></div>
-      <p class="snapshot" style="text-align:left;margin-top:6px;">41% complete based on milestone completion.</p>
+      <div class="progress-track"><div class="progress-fill" style="width:45%"></div></div>
+      <p class="snapshot" style="text-align:left;margin-top:6px;">45% complete based on milestone completion.</p>
     </section>
   </div>
   <div class="container">
@@ -95,31 +95,24 @@ gantt
         </ul>
       </details>
 
+      <details open>
+        <summary><strong>01 May 2025</strong> — Completed</summary>
+        <ul class="clean-list">
+          <li>✅ Backend – Experian SSN-Trace poller (<code>EXP-1</code>)</li>
+        </ul>
+      </details>
+
       <details>
-        <summary><strong>01 May 2025</strong> — Planned</summary>
-        <div class="lane">
-          <h3 class="lane-label">Integration &amp; Infra</h3>
-          <ul class="clean-list">
-            <li>🔄 Secure InformData sample payloads to unblock <code>INF-1</code></li>
-            <li>🔄 Deploy Prom metrics (<code>INF-2</code>) to staging</li>
-            <li>🔄 Finalize Helm secret templates (<code>DEV-1</code>)</li>
-          </ul>
-        </div>
-        <div class="lane">
-          <h3 class="lane-label">Data &amp; UI</h3>
-          <ul class="clean-list">
-            <li>🔄 Continue RecordSynth v2 implementation (<code>SYN-1</code>)</li>
-            <li>🔄 Continue § 613 notice UI (<code>NOT-1</code>)</li>
-            <li>🔄 Continue Review UI pane (<code>UI-1</code>)</li>
-          </ul>
-        </div>
-        <div class="lane">
-          <h3 class="lane-label">QA &amp; Perf</h3>
-          <ul class="clean-list">
-            <li>🔄 Merge completed QA PRs (QA-1, QA-2, PERF-1)</li>
-            <li>🔄 Kick off baseline load tests using k6 harness</li>
-          </ul>
-        </div>
+        <summary><strong>02 May 2025</strong> — Planned</summary>
+        <ul class="clean-list">
+          <li>🔄 Secure InformData sample payloads to unblock <code>INF-1</code></li>
+          <li>🔄 Deploy Prom metrics (<code>INF-2</code>) to staging and validate scrape targets.</li>
+          <li>🔄 Finalize Helm secret templates (<code>DEV-1</code>) for secrets automation.</li>
+          <li>🔄 Kick off baseline load tests using k6 harness.</li>
+          <li>🔄 Continue RecordSynth v2 implementation (<code>SYN-1</code>)</li>
+          <li>🔄 Continue § 613 notice UI (<code>NOT-1</code>)</li>
+          <li>🔄 Continue Review UI pane (<code>UI-1</code>)</li>
+        </ul>
       </details>
     </section>
 
