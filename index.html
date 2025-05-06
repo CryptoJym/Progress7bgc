@@ -9,13 +9,83 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="preload" href="components.md" as="fetch" crossorigin>
+  <style>
+    /* Tooltip styles */
+    .tooltip{position:relative;cursor:help;border-bottom:1px dotted var(--muted);} 
+    .tooltip::after{content:attr(data-tip);position:absolute;bottom:125%;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:6px 8px;font-size:0.8rem;border-radius:6px;white-space:pre-wrap;opacity:0;pointer-events:none;transition:opacity .15s ease;}
+    .tooltip:hover::after,.tooltip:focus::after{opacity:1;}
+
+    /* --- Vuplicity Brand Tokens --- */
+    :root {
+      --vp-primary: #2647ff; /* Primary action blue */
+      --vp-primary-dark: #1a35c2;
+      --vp-dark: #0e1a3c; /* Deep navy for headings */
+      --vp-light: #f6f8ff; /* Spare light background */
+      --vp-accent: #00b7ff; /* Secondary accent */
+    }
+    .brand-gradient {
+      background: linear-gradient(90deg, var(--vp-primary) 0%, var(--vp-accent) 100%);
+      /* text gradient */
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .link-primary {color: var(--vp-primary);}
+    .link-primary:hover {color: var(--vp-primary-dark);}
+
+    /* Updates section styling */
+    #updates h2 {font-size:1.8rem; margin-bottom:10px;}
+    #updates .snapshot {text-align:center; margin-bottom:24px;}
+  </style>
 </head>
 <body>
-  <nav class="top-nav"><a href="index.html" class="logo">UT 7-yr BGC</a><a href="#archive">Archive ↘</a><a href="project-progress.html">Project Progress</a><a href="https://vuplicity.com" target="_blank" rel="noopener">vuplicity.com ↗</a><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></nav>
+  <nav class="top-nav"><a href="index.html" class="logo">UT 7-yr BGC</a><a href="#updates">Updates ↘</a><a href="project-progress.html">Project Progress</a><a href="https://vuplicity.com" target="_blank" rel="noopener">vuplicity.com ↗</a><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></nav>
   <header class="hero">
     <h1>Project Progress — Utah 7-Year Background-Check Mesh</h1>
-    <p class="snapshot"><span class="tag"><time datetime="2025-05-01">Snapshot: 01 May 2025</time></span></p>
+    <p class="snapshot"><span class="tag"><time datetime="2025-05-05">Snapshot: 05 May 2025</time></span></p>
   </header>
+
+  <!-- Vuplicity Updates – May 5, 2025 -->
+  <div class="container">
+    <section id="updates" class="card" aria-labelledby="updates-heading">
+      <h2 id="updates-heading" class="brand-gradient">Vuplicity Updates</h2>
+      <p class="snapshot">May 5, 2025</p>
+
+      <h3>Meeting with Rick – Key Takeaways</h3>
+      <ul class="clean-list">
+        <li><strong>Demo &amp; Test System:</strong> Dedicated demo environment plus client-database access for edge-case validation (e.g., New Jersey redactions). Enables AI-driven court navigation, runner dispatch, and Stripe payments.</li>
+        <li><strong>PBSA Booth:</strong> We’ve started preparing to exhibit at the 2025 PBSA Conference.</li>
+        <li><strong>Insight:</strong> Rick currently perceives us as primarily a QA automation layer — we need clearer messaging on full-stack AI value.</li>
+      </ul>
+
+      <h3>Accomplishments</h3>
+      <ul class="clean-list">
+        <li><strong>Agent Builder v1:</strong> Completed orchestration layer for large multi-agent builds.</li>
+        <li><strong>Site Refresh:</strong> Vuplicity.com redesign in progress with improved UX and updated branding.</li>
+      </ul>
+
+      <h3>Today's Changes</h3>
+      <ul class="clean-list">
+        <li>Retooled multiple UI pages with new components.</li>
+        <li>Completed in-depth branding studies for product-market alignment.</li>
+        <li>Refreshed the <a href="https://vuplicity.com" class="link-primary" target="_blank" rel="noopener">Pricing</a> page to align with new brand voice.</li>
+      </ul>
+
+      <h3>In Development</h3>
+      <p><strong>Enterprise Content Automation System</strong> (alpha): Converts instructional AI demo videos into self-contained web pages, schedules rollout, and auto-markets across multiple channels. Undergoing load testing with Agent Builder for enterprise scalability.</p>
+
+      <h3>Reference</h3>
+      <p>Read the full transcript of our second meeting with Rick <a href="https://turboscribe.ai/transcript/share/3737987690742760520/RNFpLdeeu7wA4rm1XKJEjmexJ4snw1qXltdOu48aHAA/second-meeting-with-rick" class="link-primary" target="_blank" rel="noopener">here</a>.</p>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="intro card" aria-label="Project overview">
+      <h2>What is this project?</h2>
+      <p>We’re building an automated background-check system for Utah that covers the most recent seven years. The service delivers fast, accurate results at a low cost.</p>
+      <p><strong>Why it matters:</strong> Faster background checks help people get hired sooner and reduce manual work for HR teams.</p>
+    </section>
+  </div>
 
   <div class="container">
     <section class="overall card" aria-labelledby="overall-heading">
@@ -28,10 +98,10 @@
   <div class="container">
     <main>
       <section class="summary card" aria-label="Project summary">
-        🔄 <strong>PRD v1.5 pivot</strong>: Shifted to dual-vendor model with <strong>InformData (court data)</strong> + <strong>Experian (SSN trace)</strong>; CJIS enclave removed; OCR stub complete; <strong>4 milestones</strong> remain before GA.
+        <strong>Recent update:</strong> We now work with two data partners—<strong>InformData</strong> (court data) and <strong>Experian</strong> (SSN matching). This simplifies our system and cuts costs. We have removed the <span class="tooltip" data-tip="CJIS = Criminal Justice Information Services — a specialised, high-security environment.">CJIS</span> environment, and our first <span class="tooltip" data-tip="Optical Character Recognition – turning PDFs into text so computers can read them.">OCR</span> component is live. <strong>4 big tasks</strong> remain before <span class="tooltip" data-tip="General Availability – the point where the product is officially released to all customers.">GA</span>.
       </section>
       <section class="summary status card" aria-label="Integration status">
-        ⏳ <strong>Status:</strong> OCR stub implementation complete. Vendor credentials requested (InformData &amp; Experian). Backend modules for watchlist, geocoder, and SSN-trace already complete.<br>
+        ⏳ <strong>Status:</strong> Our PDF-reader is complete and we’re waiting for test logins from both partners. The core backend pieces (watchlist check, address lookup, SSN trace) are ready.<br>
         📄 <a href="https://rightful-geese-a54.notion.site/Vuplicity-1d2541ef354280d2bdbfe3ddb3522502?pvs=4" target="_blank" rel="noopener">Research docs &amp; technical specs ↗</a>
       </section>
 
@@ -324,6 +394,7 @@ git worktree add ../utah-SEC-1 origin/feature/secops/SEC-1</code></pre>
       </section>
     </main>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
